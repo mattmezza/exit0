@@ -1,6 +1,8 @@
 exit0
 ===
 
+![exit0 banner](https://raw.githubusercontent.com/mattmezza/exit0/main/banner.png)
+
 🚀 BDD testing for your CLI apps, in pure bash!
 
 `exit0` it's a lightweight, pure Bash lib designed for [Behavior-Driven
