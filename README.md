@@ -25,7 +25,7 @@ Also, it is a play on the Spanish word *"éxito"* which means *"success"*.
 
 <details>
   <summary>DEMO</summary>
-    <img src="docs/banner.gif" alt="exit0 demo">
+    <img src="https://github.com/mattmezza/exit0/raw/refs/heads/main/docs/demo.gif" alt="exit0 demo">
 </details>
 
 ## ✨ Why You'll Love `exit0`
