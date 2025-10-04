@@ -15,6 +15,10 @@ Sleep 500ms
 Enter
 Sleep 15s
 
+Type "echo"
+Enter
+Sleep 500ms
+
 Type "./ls.test.sh"
 Sleep 500ms
 Enter

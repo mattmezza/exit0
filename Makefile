@@ -8,3 +8,8 @@ release:
 	@echo "Creating GitHub release"
 	gh release create v$(VERSION) --title "Release v$(VERSION)" --generate-notes
 	@echo "Release complete"
+
+docs/demo.gif: docs/demo.tape
+	@echo "Generating demo GIF"
+	vhs docs/demo.tape
+	@echo "Demo GIF generated at docs/demo.gif"
