@@ -3,8 +3,9 @@ exit0
 
 🚀 BDD testing for your CLI apps, in pure bash!
 
-`exit0` it's a lightweight, pure Bash lib designed for Behavior-Driven
-Development (BDD), making your tests super readable!
+`exit0` it's a lightweight, pure Bash lib designed for [Behavior-Driven
+Development (BDD)](https://en.wikipedia.org/wiki/Behavior-driven_development),
+making your tests super readable!
 
 ## What does it do? 🤔
 
@@ -113,7 +114,7 @@ We'd love your help! Whether you've found a bug 🐞, have an idea for a new ass
 
 ## Future Ideas
 
-- Adding support for sending input to commands via STDIN ⌨️.
+- Adding support for sending input to commands via `stdin` ⌨️.
 - More robust error handling in `when_running` for edge cases.
 
 ## 📄 License
