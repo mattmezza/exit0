@@ -9,7 +9,7 @@ exit0
 Development (BDD)](https://en.wikipedia.org/wiki/Behavior-driven_development),
 making your tests super readable!
 
-## What does it do? 🤔
+## 🤔 What does it do?
 
 It helps you test your CLI app in a clean, isolated environment (a subshell)
 and checks three crucial things:
@@ -33,13 +33,16 @@ Here's a quick peek at why `exit0` is awesome:
 - **Instant Feedback!**: colorful output telling you what passed (✅ green!) and what failed (❌ red!).
 - **Clean Environment Management**: `setup_test_env` and `teardown_test_env` hooks.
 
-## Installation 📥
+## 📥 Installation
 
 - Download the lib and place it in your project's test directory.
-  `cd tests && curl -o exit0.sh https://raw.githubusercontent.com/mattmezza/exit0/main/exit0.sh`
+
+  ```bash
+  curl -o exit0.sh https://raw.githubusercontent.com/mattmezza/exit0/main/exit0.sh
+  ```
 - Create your test script (e.g., `my_script.test.sh`).
 
-## Test File Example 🧑‍💻
+## 🧑‍💻 Test File Example
 
 Here's how your test file will look:
 
@@ -74,7 +77,7 @@ run_teardown
 report_results
 ```
 
-📝 Assertion Guide
+## 📝 Assertion Guide
 
 `exit0` gives you a powerful set of assertions to check your CLI's behavior:
 
@@ -93,7 +96,7 @@ Assertion Function                          |What it Tests  |Description|
 `then_the_stderr_should_contain "Error"`    |stderr         |Checks if any error output contains a specific string.|
 `then_the_stderr_should_be_empty`           |stderr         |Ensures there was no output to standard error.|
 
-## Chaining Assertions 🔗
+## 🔗 Chaining Assertions
 
 You can chain multiple assertions after a single `when_running` call using
 `and_the_...` functions (e.g., `and_stdout_should_contain`) for cleaner, more
@@ -114,7 +117,7 @@ Important: Make sure to call `run_teardown` at the very end of your test script 
 
 We'd love your help! Whether you've found a bug 🐞, have an idea for a new assertion, or want to improve the documentation, feel free to open an Issue or submit a Pull Request!
 
-## Future Ideas
+## 💡 Future Ideas
 
 - Adding support for sending input to commands via `stdin` ⌨️.
 - More robust error handling in `when_running` for edge cases.
