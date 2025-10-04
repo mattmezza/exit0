@@ -1,6 +1,6 @@
 ![exit0 banner](docs/banner.png)
 
-exit0
+`exit0`
 ===
 
 🚀 BDD testing for your CLI apps, in pure bash!
