@@ -1,4 +1,4 @@
-![exit0 banner](https://raw.githubusercontent.com/mattmezza/exit0/main/banner.png)
+![exit0 banner](https://raw.githubusercontent.com/mattmezza/exit0/main/docs/banner.png)
 
 exit0
 ===
@@ -22,6 +22,11 @@ The name `exit0` is a little wink 😉 to the `0` exit code that signals success
 in the Bash world!
 
 Also, it is a play on the Spanish word *"éxito"* which means *"success"*.
+
+<details>
+  <summary>DEMO</summary>
+    ![exit0 demo](https://raw.githubusercontent.com/mattmezza/exit0/main/docs/demo.gif)
+</details>
 
 ## ✨ Why You'll Love `exit0`
 
