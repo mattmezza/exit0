@@ -1,4 +1,4 @@
-![exit0 banner](https://raw.githubusercontent.com/mattmezza/exit0/main/docs/banner.png)
+![exit0 banner](docs/banner.png)
 
 exit0
 ===
@@ -25,7 +25,7 @@ Also, it is a play on the Spanish word *"éxito"* which means *"success"*.
 
 <details>
   <summary>DEMO</summary>
-    ![exit0 demo](https://raw.githubusercontent.com/mattmezza/exit0/main/docs/demo.gif)
+    ![exit0 demo](docs/demo.gif)
 </details>
 
 ## ✨ Why You'll Love `exit0`
