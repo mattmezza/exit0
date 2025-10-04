@@ -1,7 +1,7 @@
+![exit0 banner](https://raw.githubusercontent.com/mattmezza/exit0/main/banner.png)
+
 exit0
 ===
-
-![exit0 banner](https://raw.githubusercontent.com/mattmezza/exit0/main/banner.png)
 
 🚀 BDD testing for your CLI apps, in pure bash!
 
