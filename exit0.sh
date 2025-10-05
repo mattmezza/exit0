@@ -16,15 +16,16 @@ red="\033[31m" # red
 
 L1="  "
 L2="    "
+L3="      "
 
 assert() {
     local result="$1"
     local message="$2"
     if [[ "$result" -eq 0 ]]; then
-        echo -e "${L2}${b}${green}✅PASS$n: ${i}${message}${n}"
+        echo -e "${L3}${b}${green}✅PASS$n: ${i}${message}${n}"
         TEST_SUCCESS=$((TEST_SUCCESS + 1))
     else
-        echo -e "${L2}${b}${red}❌FAIL$n: ${i}${message}${n}"
+        echo -e "${L3}${b}${red}❌FAIL$n: ${i}${message}${n}"
         TEST_FAILURES=$((TEST_FAILURES + 1))
     fi
 }
@@ -193,24 +194,35 @@ and_stderr_should_be_empty() { then_the_stderr_should_be_empty; }
 the_stderr_should_be_empty() { then_the_stderr_should_be_empty; }
 stderr_should_be_empty() { then_the_stderr_should_be_empty; }
 
-scenario() {
+begin_scenario() {
     local name="$1"
+    local description="$2" # Optional description
     TEST_SCENARIOS=$((TEST_SCENARIOS + 1))
     echo -e "${b}# Scenario $TEST_SCENARIOS: ${i}\"${name}\"$n"
+    echo -e "${L1}${i}${description}$n"
 
     # Check for user-defined setup functions and run them
-    if declare -f setup_test_env > /dev/null; then
-        setup_test_env
-        echo -e "${L1}${i}(test set up successfully)$n"
+    if declare -f setup_scenario_$name > /dev/null; then
+        setup_scenario_$name
+        echo -e "${L1}${i}(scenario set up successfully)$n"
     fi
 }
 
-# Function to be called at the end of the test file
-run_teardown() {
+end_scenario() {
     # Check for user-defined teardown functions and run them
-    if declare -f teardown_test_env > /dev/null; then
-        teardown_test_env
-        echo -e "${L1}${i}(test teared down successfully)$n"
+    if declare -f teardown_scenario_$scenario > /dev/null; then
+        teardown_scenario_$scenario
+        echo -e "${L1}${i}(scenario teared down successfully)$n"
+    fi
+}
+
+begin_test() {
+    local descr="$1"
+    echo -e "${i}${descr}$n"
+    # Check for user-defined setup functions and run them
+    if declare -f setup_test > /dev/null; then
+        setup_test
+        echo -e "${i}(test set up successfully)$n"
     fi
 }
 
@@ -228,4 +240,13 @@ report_results() {
         echo -e "${L1}${i}${failed} failure over $tot assertions (in $tests tests)$n"
         return 1
     fi
+}
+
+end_test() {
+    # Check for user-defined teardown functions and run them
+    if declare -f teardown_test > /dev/null; then
+        teardown_test
+        echo -e "${i}(test teared down successfully)$n"
+    fi
+    report_results
 }
